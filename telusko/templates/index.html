@@ -1,0 +1,399 @@
+{% load static %}
+{% static "images" as baseUrl %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>TourismRecommendationSystem</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Travello template project">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/bootstrap4/bootstrap.min.css' %}">
+	<link href="{% static 'plugins/font-awesome-4.7.0/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/owl.theme.default.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'plugins/OwlCarousel2-2.2.1/animate.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/main_styles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'styles/responsive.css' %}">
+	
+</head>
+
+<body>
+
+	<div class="super_container">
+
+		<!-- Header -->
+
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="header_content d-flex flex-row align-items-center justify-content-start">
+							<div class="header_content_inner d-flex flex-row align-items-end justify-content-start">
+								<div class="logo"><a href="index.html">TourismRecommendationSystem</a></div>
+								<nav class="main_nav">
+									<ul class="d-flex flex-row align-items-start justify-content-start">
+										<li class="active"><a href="index.html">Home</a></li>
+										<li><a href="contact.html">Contact</a></li>
+
+										{% if user.is_authenticated %}
+										<li>Hello, {{user.first_name}}</li>
+										<li><a href="accounts/logout">Logout</a></li>
+										{% else %}	
+										<li><a href="accounts/register">Register</a></li>
+										<li><a href="accounts/login">Login</a></li>
+										{% endif %}
+									</ul>
+								</nav>
+
+								<div class="hamburger ml-auto">
+									<i class="fa fa-bars" aria-hidden="true"></i>
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header_social d-flex flex-row align-items-center justify-content-start">
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- Menu -->
+
+		<div class="menu">
+			<div class="menu_header d-flex flex-row align-items-center justify-content-start">
+				<div class="menu_logo"><a href="index.html">TourismRecommendationSystem</a></div>
+				<div class="menu_close_container ml-auto">
+					<div class="menu_close">
+						<div></div>
+						<div></div>
+					</div>
+				</div>
+			</div>
+			<div class="menu_content">
+				<ul>
+					<li><a href="inex.html">Home</a></li>
+					<li><a href="about.html">About us</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="news.html">News</a></li>
+					<li><a href="contact.html">Contact</a></li>
+				</ul>
+			</div>
+			<div class="menu_social">
+				<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
+				<ul class="d-flex flex-row align-items-start justify-content-start">
+					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
+					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- Home -->
+
+		<div class="home">
+
+			<!-- Home Slider -->
+			<div class="home_slider_container">
+				<div class="owl-carousel owl-theme home_slider">
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+							style="background-image:url({% static 'images/home_slider.jpg' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2>Find your Best</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+							background-image="url({% static 'images/home_slider.jpg' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2>Find your Best</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Slide -->
+					<div class="owl-item">
+						<div class="background_image"
+						background-image="url({% static 'images/home_slider.jpg' %})"></div>
+						<div class="home_slider_content_container">
+							<div class="container">
+								<div class="row">
+									<div class="col">
+										<div class="home_slider_content">
+											<div class="home_title">
+												<h2>Find Your Best</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="home_page_nav">
+					<ul class="d-flex flex-column align-items-end justify-content-end">
+						<li><a href="#" data-scroll-to="#search">Search<span>01</span></a></li>
+						<li><a href="#" data-scroll-to="#destinations">Popular Destinations<span>02</span></a></li>
+						<li><a href="#" data-scroll-to="#upload">Upload<span>03</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<br/>
+		<!-- Search -->
+
+		<div class="home_search">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_search_container">
+							<div class="home_search_title" id="search">Search for your trip</div>
+							<div class="home_search_content">
+								<form action="search" class="home_search_form" id="home_search_form">
+									<div
+										class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+										<input type="text" class="search_input search_input_1" placeholder="State"
+											required="required" name="state">
+										<button class="home_search_button">search</button>
+										</div>
+								</form>
+										<div class="home_search_container">
+										<div class="home_search_title" id="upload">upload your trip</div>
+										<form action="upload/" class="home_search_form" id="home_search_form" method="post" enctype="multipart/form-data">
+											{% csrf_token %}
+											<div
+												class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start"></div>
+												<input type="text" class="search_input search_input_1" placeholder="NameOfPlace" name="nameofplace"
+													required="required" >
+												<input type="file" class="search_input search_input_2" placeholder="Upload Pic" name="image"
+													required="required">
+												<input type="text" class="search_input search_input_3" placeholder="Description" name="description"
+													required="required">
+													<input type="text" class="search_input search_input_4" placeholder="city" name="city"
+													required="required">
+												<input type="text" class="search_input search_input_4" placeholder="state" name="state"
+													required="required">
+													<input type="text" class="search_input search_input_4" placeholder="TypeOfPlace" name="typeofplace"
+													required="required">
+												<button class="home_search_button">upload</button>
+										
+											
+											</form>
+											<br/>
+											<br/>
+											<br/>
+		
+											{%if request.user.is_authenticated%}
+											<div>
+											<center>
+											<form action="changepreferences/" class="home_search_form" id="home_search_form" method="post">
+												{% csrf_token %}
+												<div
+										class="d-flex flex-lg-row flex-column align-items-start justify-content-lg-between justify-content-start">
+										<input type="text" class="search_input search_input_1" placeholder="changepreferences" name="preferences">
+				
+										<button class="home_search_button">changepreferences</button>
+										</div>
+											</form>	</center>
+											</div>
+											{%endif%}
+										</div>
+								
+								
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		</div>
+	</div>
+	
+	
+
+
+
+
+
+		<!-- Intro -->
+
+		<div class="intro">
+			<div class="intro_background" background-image="url({% static 'images/beach.svg' %})"></div>
+			<div class="container">
+				<div class="row">
+					<div class="col">
+					</div>
+				</div>
+			</div>
+		</div>
+		{% if request.user.is_authenticated%}
+		<div class="destinations" id="destinations">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">simply amazing places</div>
+						<div class="section_title">
+							<h2>Your Recommendations</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row destinations_row">
+					<div class="col">
+						<div class="destinations_container item_grid">
+
+							{% for row in recommendations %}
+							
+							<div class="destination item">
+								<div class="destination_image">
+									
+										<a href="{% url 'destination/' pk=row.pk %}"><img src="{{ row.img.url }}" alt="" height=300 width=300></a>
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destination/">{{row.name}}</a>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{row.desc}}</p>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{row.city}}</p>
+										<p>{{row.state}}</p>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{row.typeofplace}}</p>
+									</div>
+									<!--<div class="destination_price">From $dest.price}</div>-->
+								</div>
+							</div>
+
+							{% endfor %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{% endif %}
+		<!-- Destinations -->
+
+		<div class="destinations" id="destinations">
+			<div class="container">
+				<div class="row">
+					<div class="col text-center">
+						<div class="section_subtitle">simply amazing places</div>
+						<div class="section_title">
+							<h2>Popular Destinations</h2>
+						</div>
+					</div>
+				</div>
+				<div class="row destinations_row">
+					<div class="col">
+						<div class="destinations_container item_grid">
+
+							{% for dest in dests %}
+							<!-- Destination -->
+							<div class="destination item">
+								<div class="destination_image">
+									
+									    <img src="{{ dest.img.url }}" alt="" height=200 width=200>
+
+									
+								</div>
+								<div class="destination_content">
+									<div class="destination_title"><a href="destinations.html">{{dest.name}}</a>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{dest.desc}}</p>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{dest.city}}</p>
+										<p>{{dest.state}}</p>
+									</div>
+									<div class="destination_subtitle">
+										<p>{{dest.typeofplace}}</p>
+									</div>
+									
+								</div>
+							</div>
+
+							{% endfor %}
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+						<script src="{% static 'js/jquery-3.2.1.min.js' %}">
+						</script>
+						<script src="{% static 'styles/bootstrap4/popper.js' %}"></script>
+						<script src="{% static 'styles/bootstrap4/bootstrap.min.js' %}"></script>
+						<script src="{% static 'plugins/OwlCarousel2-2.2.1/owl.carousel.js' %}"></script>
+						<script src="{% static 'plugins/Isotope/isotope.pkgd.min.js' %}"></script>
+						<script src="{% static 'plugins/scrollTo/jquery.scrollTo.min.js' %}"></script>
+						<script src="{% static 'plugins/easing/easing.js' %}"></script>
+						<script src="{% static 'plugins/parallax-js-master/parallax.min.js' %}"></script>
+						<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>
